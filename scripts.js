@@ -66,6 +66,10 @@ function ClearSession() {
     localStorage.clear();
     alert("Session is cleared");
 }
+function SelectAd(){
+    var adNum= Math.floor(4*Math.random());
+    document.getElementById("adImg").src= "ads/ad" + adNum + ".gif";
+}
 function PlayGame() {
     var playerChoice;
     var playerImage;
