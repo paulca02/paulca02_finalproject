@@ -6,7 +6,7 @@
     <script type = "text/javascript" src="scripts.js"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body onload="setInterval('SelectAd()', 5000);">
+<body onload="setInterval('SelectAd()', 5000);" style="background-color:orange";>
 
 <div style="text-align:center">
     <img class="banner" id="adImg" alt="banner ad" src="ads/ad0.gif">
@@ -44,8 +44,8 @@ Player Choice:
 
 <p>Please select a background color: <select id="background"><option>Yellow</option><option>Orange</option><option>Pink</option></select></p>
 
-<input type="radio" name="language" value="English">English<br>
-<input type="radio" name="language" value="German">German<br>
+<input type="radio" name="language" id="English" checked=true>English<br>
+<input type="radio" name="language" id="German" checked=true>German<br>
 
 <input type="button" value="Make changes" onclick = "window.location=(MakeChanges());">
 

@@ -2,6 +2,7 @@ var playerwins= 0;
 var computerwins= 0;
 var ties= 0;
 var name;
+var background;
 const ROCK= 0;
 const PAPER= 1;
 const SCISSORS= 2;
@@ -129,4 +130,28 @@ function PlayGame() {
     document.getElementById("picComputer").src= computerImage;
     document.getElementById("divSummary").innerHTML= summary;
 
+}
+function MakeChanges(){
+    var background=document.getElementById("background").selectedIndex;
+    var varible;
+
+    if(background==0 && document.getElementById("English").checked){
+        variable="EngYellow.html";
+    }
+    else if (background==1 && document.getElementById("English").checked){
+        variable="EngOrange.html";
+    }
+    else if (background==2 && document.getElementById("English").checked){
+        variable="EngPink.html";
+    }
+    else if (background==0 && document.getElementById("German").checked){
+        variable="GerYellow.html";
+    }
+    else if (background==1 && document.getElementById("German").checked){
+        variable="GerOrange.html";
+    }
+    else if (background==2 && document.getElementById("German").checked){
+        variable="GerPink.html";
+    }
+    return variable;
 }

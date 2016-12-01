@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Schere, Stein, Papier</title>
+    <script type = "text/javascript" src="scripts.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body onload="setInterval('SelectAd()', 5000);" style="background-color:yellow";>
+
+<div style="text-align:center">
+    <img class="banner" id="adImg" alt="banner ad" src="ads/ad0.gif">
+</div>
+
+<h2>Schere Stein Papier</h2>
+
+<p>Geben Sie bitte ihren name ein: <input type="text" name="name"></p>
+
+Speilerwahl:
+<select id = "playerChoices">
+    <option>Stein</option>
+    <option>Papier</option>
+    <option>Schere</option>
+</select>
+
+<p><input type = "button" value = "Speilen" onclick ="PlayGame();"></p>
+
+<div style = text-align:center>
+    <table>
+        <tr><td>Speilerwahl</td><td>Computerauswahl</td></tr>
+        <tr><td><img id = "picPlayer" height = 110 width = 100></td><td><img id = "picComputer" height = 100 width = 100></td></tr>
+        <tr><td colspan = "2"><div id = "divSummary">&nbsp;</div></td></tr>
+    </table>
+</div>
+
+<p>
+<table>
+    <tr><td></td>           <td>Gewinnt</td><td>Prozentsatz</td></tr>
+    <tr><td>Speiler</td>    <td width="40px"><div id = "divPlayerWins">&nbsp;</div></td><td><div id="divPlayerPercent"></div></td></tr>
+    <tr><td>Computer</td>  <td><div id = "divComputerWins">&nbsp;</div></td><td><div id="divComputerPercent"></div></td></tr>
+    <tr><td>Beziehungen</td>           <td><div id = "divTies">&nbsp;</div></td><td><div id="divTiesPercent"></div></td></tr>
+</table>
+</p>
+
+<p>Bitte wählen sie eine hintergrundfarbe: <select id="background"><option>Gelb</option><option>Orange</option><option>Rosa</option></select></p>
+
+<input type="radio" name="language" id="English" checked=true>Englisch<br>
+<input type="radio" name="language" id="German" checked=true>Deutsche<br>
+
+<input type="button" value="Änderungen vornehmen" onclick = "window.location=(MakeChanges());">
+
+<input type = "button" value="Speichern und schließen" onclick = "Close();">
+<input type = "button" value = "Löschen Sie Sitzung" onclick = "ClearSession();">
+
+<p><a href="leaderboards.html">Bestenliste</a></p>
+
+</body>
+</html>
